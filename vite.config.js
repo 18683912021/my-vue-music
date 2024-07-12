@@ -5,4 +5,11 @@ export default defineConfig({
   plugins: [
     uni(),
   ],
+  css: {
+    loaderOptions: {
+      sass: {
+        implementation: require('sass')
+      }
+    }
+  },
 })
