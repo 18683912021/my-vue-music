@@ -6,9 +6,14 @@ export default defineConfig({
     uni(),
   ],
   css: {
-    loaderOptions: {
-      sass: {
-        implementation: require('sass')
+    lpreprocessorOptions: {
+      less: {
+        modifyVars: {
+          // 这里可以定义 Less 变量的覆盖
+        },
+        // 其他 Less 相关的选项
+        additionalData: `@import "@/assets/less/variable.less";
+        @import "@/assets/less/mixin.less";`
       }
     }
   },

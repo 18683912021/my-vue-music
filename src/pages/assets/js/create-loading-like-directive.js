@@ -40,12 +40,12 @@ export default function createLoadingLikeDirective(Comp) {
     if (['absolute', 'fixed', 'relative'].indexOf(style.position) === -1) {
       addClass(el, relativeCls)
     }
-    el.appendChild(el[name].instance.$el)
+    el.appendChild(el[name].instance.@el)
   }
 
   function remove(el) {
     const name = Comp.name
     removeClass(el, relativeCls)
-    el.removeChild(el[name].instance.$el)
+    el.removeChild(el[name].instance.@el)
   }
 }

@@ -14,11 +14,11 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
   .header {
     height: 44px;
     text-align: center;
-    color: $color-theme;
+    color: @color-theme;
     font-size: 0;
     .icon {
       display: inline-block;
@@ -34,7 +34,7 @@
       display: inline-block;
       vertical-align: top;
       line-height: 44px;
-      font-size: $font-size-large;
+      font-size: @font-size-large;
     }
     .mine {
       position: absolute;
@@ -43,8 +43,8 @@
       .icon-mine {
         display: block;
         padding: 12px;
-        font-size: $font-size-large-x;
-        color: $color-theme;
+        font-size: @font-size-large-x;
+        color: @color-theme;
       }
     }
   }

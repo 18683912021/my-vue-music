@@ -2,6 +2,7 @@
   <m-header />
 </template>
 <script>
+import Header from '@/pages/components/header/header.vue'
 export default {
   onLaunch: function () {
     // console.log('App Launch')
@@ -13,11 +14,11 @@ export default {
     // console.log('App Hide')
   },
   components: {
-    MHeader: () => import('@/pages/components/header/header.vue')
+    MHeader: Header
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="less">
 /*每个页面公共css */
 </style>

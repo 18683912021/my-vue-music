@@ -23,7 +23,7 @@ export default function createDetailComponent(name, key, fetch) {
           ret = data
         } else {
           const cached = storage.session.get(key)
-          if (cached && (cached.mid || cached.id + '') === this.$route.params.id) {
+          if (cached && (cached.mid || cached.id + '') === this.@route.params.id) {
             ret = cached
           }
         }
@@ -41,8 +41,8 @@ export default function createDetailComponent(name, key, fetch) {
     async created() {
       const data = this.computedData
       if (!data) {
-        const path = this.$route.matched[0].path
-        this.$router.push({
+        const path = this.@route.matched[0].path
+        this.@router.push({
           path
         })
         return
