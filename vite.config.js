@@ -12,8 +12,8 @@ export default defineConfig({
           // 这里可以定义 Less 变量的覆盖
         },
         // 其他 Less 相关的选项
-        additionalData: `@import "@/assets/less/variable.less";
-        @import "@/assets/less/mixin.less";`
+        additionalData: `@import "@/pages/assets/less/variable.less";
+        @import "@/pages/assets/less/mixin.less";`
       }
     }
   },
