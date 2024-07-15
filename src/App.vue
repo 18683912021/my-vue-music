@@ -2,7 +2,7 @@
   <m-header />
 </template>
 <script>
-import Header from '@/pages/components/header/header.vue'
+import Header from './src/pages/components/header/header.vue'
 export default {
   onLaunch: function () {
     // console.log('App Launch')
