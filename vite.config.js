@@ -6,7 +6,7 @@ export default defineConfig({
     uni(),
   ],
   css: {
-    lpreprocessorOptions: {
+    preprocessorOptions: {
       less: {
         modifyVars: {
           // 这里可以定义 Less 变量的覆盖
