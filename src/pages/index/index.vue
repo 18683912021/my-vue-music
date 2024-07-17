@@ -1,4 +1,5 @@
 <template>
+  <m-header />
 </template>
 
 <script>
@@ -8,7 +9,7 @@ export default {
       title: 'Hello',
     }
   },
-  onLoad() {},
+  onLoad() { },
   methods: {},
 }
 </script>

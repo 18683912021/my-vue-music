@@ -1,8 +1,4 @@
-<template>
-  <m-header />
-</template>
 <script>
-import Header from '@/pages/components/header/header.vue'
 export default {
   onLaunch: function () {
     // console.log('App Launch')
@@ -13,9 +9,6 @@ export default {
   onHide: function () {
     // console.log('App Hide')
   },
-  components: {
-    MHeader: Header
-  }
 }
 </script>
 
