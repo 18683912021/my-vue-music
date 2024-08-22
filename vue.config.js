@@ -11,5 +11,10 @@ module.exports = defineConfig({
         `
       }
     }
+  },
+  devServer:{
+    before(app){
+      registerRouter(ass)
+    }
   }
 })
