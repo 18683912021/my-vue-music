@@ -1,6 +1,5 @@
 <template>
   <m-header></m-header>
-  
   <Tab />
 </template>
 
