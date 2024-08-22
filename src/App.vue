@@ -1,6 +1,7 @@
 <template>
   <m-header></m-header>
-  <Tab />
+  <tab></tab>
+  <router-view></router-view>
 </template>
 
 <script>
@@ -10,7 +11,7 @@ import Tab from '@/components/tab/tab'
 export default {
   components: {
     MHeader: Header,
-    Tab: Tab
+    Tab
   },
   computed: {
 
