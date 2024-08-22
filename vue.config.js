@@ -1,20 +1,26 @@
-const { defineConfig } = require('@vue/cli-service')
+const { defineConfig } = require("@vue/cli-service");
+const registerRouter = require("./backend/router");
 module.exports = defineConfig({
   transpileDependencies: true,
-  css:{
-    loaderOptions:{
-      scss:{
+  css: {
+    loaderOptions: {
+      scss: {
         // 全局引入变量和 mixin
-        additionalData:`
+        additionalData: `
           @import "@/assets/scss/variable.scss";
           @import "@/assets/scss/mixin.scss";
-        `
-      }
-    }
+        `,
+      },
+    },
   },
-  devServer:{
-    before(app){
-      registerRouter(ass)
-    }
-  }
-})
+  devServer: {
+    onBeforeSetupMiddleware(middlewares, devServer) {
+      if (devServer) {
+        // 确保 devServer.app 是存在的
+        const { app } = devServer;
+        // 在这里添加你的中间件逻辑
+        registerRouter(app);
+      }
+    },
+  },
+});
