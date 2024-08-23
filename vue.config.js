@@ -14,7 +14,7 @@ module.exports = defineConfig({
     },
   },
   devServer: {
-    onBeforeSetupMiddleware(middlewares, devServer) {
+    onBeforeSetupMiddleware(devServer) {
       if (devServer) {
         // 确保 devServer.app 是存在的
         const { app } = devServer;

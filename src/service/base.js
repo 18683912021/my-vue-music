@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const baseURL = "/";
-const ERR_OK = 0
+const ERR_OK = 0;
 
 axios.defaults.baseURL = baseURL;
 
@@ -10,8 +10,13 @@ export function get(url, params) {
     .get(url, {
       params,
     })
-    .then(() => {
-        const serverData = res.data
-        if(serverData.code === ERR_OK)
+    .then((res) => {
+      const serverData = res.data;
+      if (serverData.code === ERR_OK) {
+        return serverData.result;
+      }
+    })
+    .catch((e)=>{
+      console.log(e)
     });
 }
