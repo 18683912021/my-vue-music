@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages # 定义工作流的名称
 on:
   push: # 当有代码推送时触发
     branches:
-      - main # 仅在推送到 main 分支时触发
+      - master # 仅在推送到 master 分支时触发
 
 jobs:
   build-deploy: # 定义一个名为 build-deploy 的作业
