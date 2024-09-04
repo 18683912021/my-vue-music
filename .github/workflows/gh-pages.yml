@@ -5,6 +5,7 @@ on:
     branches:
       - master # 仅在推送到 master 分支时触发
 
+
 jobs:
   build-deploy: # 定义一个名为 build-deploy 的作业
     runs-on: ubuntu-latest # 指定在最新的 Ubuntu 环境中运行
