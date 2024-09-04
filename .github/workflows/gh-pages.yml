@@ -1,0 +1,32 @@
+name: Deploy to GitHub Pages # 定义工作流的名称
+
+on:
+  push: # 当有代码推送时触发
+    branches:
+      - main # 仅在推送到 main 分支时触发
+
+jobs:
+  build-deploy: # 定义一个名为 build-deploy 的作业
+    runs-on: ubuntu-latest # 指定在最新的 Ubuntu 环境中运行
+
+    steps: # 定义作业中执行的一系列步骤
+      - name: Checkout repository # 第一步：检出代码库
+        uses: actions/checkout@v3 # 使用官方 checkout Action 检出代码
+
+      - name: Set up Node.js # 第二步：设置 Node.js 环境
+        uses: actions/setup-node@v3 # 使用官方 setup-node Action 设置 Node.js
+        with:
+          node-version: "18" # 指定要安装的 Node.js 版本为 18
+
+      - name: Install dependencies # 第三步：安装项目依赖
+        run: npm install # 运行 npm install 命令安装依赖
+
+      - name: Build the project # 第四步：构建项目
+        run: npm run build # 运行 npm run build 命令打包项目
+
+      - name: Deploy to GitHub Pages # 第五步：部署到 GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3 # 使用 peaceiris 的 gh-pages Action
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # 使用自动生成的 GITHUB_TOKEN 进行身份验证
+          publish_dir: ./dist # 指定要部署的文件目录为 ./dist
+

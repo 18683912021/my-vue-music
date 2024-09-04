@@ -1,6 +1,7 @@
 const { defineConfig } = require("@vue/cli-service");
 const registerRouter = require("./backend/router");
 module.exports = defineConfig({
+  publicPath: process.env.NODE_ENV === "production" ? "/仓库名/" : "/",
   transpileDependencies: true,
   css: {
     loaderOptions: {
